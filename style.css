@@ -1,0 +1,54 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.image{
+    background-image: url("./Assets/filip-zrnzevic-QsWG0kjPQRY-unsplash.jpg");
+    width: 30vw;
+    height: auto;
+    background-position: 0 60%;
+}
+.logo-banner{
+    position: relative;
+    top: 30vh;
+    text-align: center;
+    height: 3em;
+    background-color: black;
+    opacity: 50%;
+    color: white;
+}
+.middle-page{
+max-width: 70vw;
+height: 40vh;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+}
+.button-section{
+    height: 30vh;
+    background-color: white;
+}
+.form-text{
+    height: 30vh;
+    width: 70vw;
+    background-color: white;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input > input{
+    width: 25vw;
+    height: 2em;
+    border-radius: 5px;
+    border: 1px solid;
+}
