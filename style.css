@@ -1,15 +1,18 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 html,
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+@font-face {
+    font-family: odin;
+    src: url(./Assets/Norse-Bold.otf);
+}
 body {
-    background-color: grey;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -25,78 +28,124 @@ body {
     flex-direction: column;
     width: 70vw;
 }
+
 .image {
     background-image: url("./Assets/pexels-pixabay-326333.jpg");
     height: 100vh;
     background-position: 0 60%;
 }
+
 .logo-banner {
     display: flex;
     flex-direction: row;
+    justify-content:center;
     position: relative;
-    top: 30%;
-    text-align: center;
-    height: 3em;
-    background-color: black;
-    opacity: 40%;
+    top: 20%;
+    align-items: center;
+    height: 8em;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
 }
-#logo{
-    width: 6em;
-    height: auto;
+
+.banner-text {
+    font-size: 5.5em;
+    font-family: odin;
+}
+
+#logo {
+    width: auto;
+    height: 7em;
     opacity: 100%;
 }
+
 .middle-page {
     width: 50vw;
     height: 40vh;
     padding-left: 3vw;
+    background-color: white;
 }
-.inputs{
+
+.inputs {
     display: flex;
     flex-flow: row wrap;
     column-gap: 5vw;
     width: 50vw;
     height: 30vh;
 }
+
 .button-section {
     height: 30vh;
-    background-color: white;
+    background-color: rgba(240, 240, 240, 1);
     padding: 5vh 0 0 3vw;
+    box-shadow: inset 0px 6px 6px grey;
 }
-.text-section{
+
+.text-section {
     display: flex;
     height: 30vh;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(240, 240, 240, 1);
     justify-content: center;
-    padding: 0 15vw 0 3vw;
-    
+    padding: 0 24vw 0 3vw;
+    font-size: 1.3em;
+    font-weight: 700;
+    gap: 3vh;
 }
-.form-title{
+
+.form-title {
     padding: 2vh 0 3vh 0;
     font-size: 1.5em;
     font-weight: 600;
+    color: rgb(100, 100, 100);
+
 }
-.form-text {
-    justify-self: center;
-}
+
 .input {
     display: flex;
     flex-direction: column;
     width: 20vw;
 }
-.input>input {
-    height: 2em;
-    border-radius: 5px;
-    border: 1px solid;
+
+label {
+    color: rgb(100, 100, 100);
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-button{
+
+.input>input {
+    height: 2.2em;
+    border-radius: 5px;
+    border: 2px solid #E5E7EB;
+    box-sizing: border-box;
+}
+.input>input:focus{
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+button {
     background-color: #8b4513;
     color: white;
-    font-size: 1em;
-    padding: 1vh 2vw 1vh 2vw;
+    font-size: 1.1em;
+    padding: 2vh 3vw 2vh 3vw;
     border: none;
     border-radius: 8px;
     box-shadow: grey;
     font-weight: 600;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.login {
+    margin-top: 4vh;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #8b4513;
+    
 }
