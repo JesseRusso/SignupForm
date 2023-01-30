@@ -1,6 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 html,
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,30 +31,37 @@ body {
     background-position: 0 60%;
 }
 .logo-banner {
+    display: flex;
+    flex-direction: row;
     position: relative;
     top: 30%;
     text-align: center;
     height: 3em;
     background-color: black;
-    opacity: 50%;
+    opacity: 40%;
     color: white;
+}
+#logo{
+    width: 6em;
+    height: auto;
+    opacity: 100%;
 }
 .middle-page {
     width: 50vw;
-    max-height: 40vh;
-    margin: 0 auto;
+    height: 40vh;
+    padding-left: 3vw;
 }
 .inputs{
     display: flex;
     flex-flow: row wrap;
     column-gap: 5vw;
-    height: 40vh;
     width: 50vw;
-
+    height: 30vh;
 }
 .button-section {
     height: 30vh;
     background-color: white;
+    padding: 5vh 0 0 3vw;
 }
 .text-section{
     display: flex;
@@ -60,6 +69,13 @@ body {
     flex-direction: column;
     background-color: white;
     justify-content: center;
+    padding: 0 15vw 0 3vw;
+    
+}
+.form-title{
+    padding: 2vh 0 3vh 0;
+    font-size: 1.5em;
+    font-weight: 600;
 }
 .form-text {
     justify-self: center;
@@ -67,10 +83,20 @@ body {
 .input {
     display: flex;
     flex-direction: column;
-    width: 15vw;
+    width: 20vw;
 }
 .input>input {
     height: 2em;
     border-radius: 5px;
     border: 1px solid;
+}
+button{
+    background-color: #8b4513;
+    color: white;
+    font-size: 1em;
+    padding: 1vh 2vw 1vh 2vw;
+    border: none;
+    border-radius: 8px;
+    box-shadow: grey;
+    font-weight: 600;
 }
