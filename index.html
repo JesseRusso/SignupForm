@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Signup Form</title>
 </head>
 
@@ -27,36 +28,42 @@
             </div>
             <div>You <em>know</em> you want to</div>
         </div>
-        <form action="post">
+        <form>
             <div class="middle-page">
                 <div class="form-title">Let's do this!</div>
                 <div class="inputs">
-                    <div class="input"><label for="first_name">First Name</label>
-                        <input type="text" name="first_name" id="first_name">
+                    <div class="input"><label for="first-name">*First Name</label>
+                        <input type="text" name="first-name" id="first-name" minlength="1" title="First name cannot be blank" required>
+                        <div><sub id="fName-error"></sub></div>
                     </div>
-                    <div class="input"><label for="last_name">Last Name</label>
-                        <input type="text" name="last_name">
+                    <div class="input"><label for="last-name">*Last Name</label>
+                        <input type="text" name="last-name" id="last-name" minlength="2" title="Last name cannot be blank" required>
+                        <div><sub id="lName-error"></sub></div>
                     </div>
-                    <div class="input"><label for="email">Email</label>
-                        <input type="email" name="email">
+                    <div class="input email"><label for="email">*Email</label>
+                        <input type="email" name="email" title="Please enter a valid email address" required>
                     </div>
-                    <div class="input"><label for="phone_number">Phone Number</label>
-                        <input type="tel" name="phone_number">
+                    <div class="input"><label for="phone-number">Phone Number</label>
+                        <input type="tel" id="tel" name="phone-number" minlength="10" maxlength="12" placeholder="ex: 604-123-4567">
                     </div>
-                    <div class="input"><label for="password">Password</label>
-                        <input type="password" name="password" required>
+                    <div class="input"><label for="password">*Password</label>
+                        <input type="password" name="password" minlength="6"id="first-pass" required>
+                        <div><sub id="pass1-error"></sub></div>
                     </div>
-                    <div class="input"><label for="password_confirm">Confirm Password</label>
-                        <input type="password" name="password_confirm" required>
+                    <div class="input"><label for="password_confirm">*Confirm Password</label>
+                        <input type="password" name="password_confirm" minlength="6" id="second-pass" required>
+                        <div><sub id="pass2-error"></sub></div>
                     </div>
                 </div>
             </div>
             <div class="button-section">
-                <button type="submit">Create Account</button>
-                <div class="login">Already have an account? <a href="#">Log in</a></div>
+                <button id="submit-button" type="button" disabled>Create Account</button>
+                <div class="login">Already have an account? <a>Log in</a></div>
             </div>
-        </form>
+        </form> 
     </div>
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>

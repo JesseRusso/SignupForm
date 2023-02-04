@@ -8,10 +8,12 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 @font-face {
     font-family: odin;
     src: url(./Assets/Norse-Bold.otf);
 }
+
 body {
     display: flex;
     flex-direction: row;
@@ -38,7 +40,7 @@ body {
 .logo-banner {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     position: relative;
     top: 20%;
     align-items: center;
@@ -87,7 +89,7 @@ body {
     background-color: rgba(240, 240, 240, 1);
     justify-content: center;
     padding: 0 24vw 0 3vw;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 700;
     gap: 3vh;
 }
@@ -97,7 +99,6 @@ body {
     font-size: 1.5em;
     font-weight: 600;
     color: rgb(100, 100, 100);
-
 }
 
 .input {
@@ -113,13 +114,15 @@ label {
     text-transform: uppercase;
 }
 
-.input>input {
+input {
     height: 2.2em;
     border-radius: 5px;
     border: 2px solid #E5E7EB;
     box-sizing: border-box;
+    transition: border-color 300ms;
 }
-.input>input:focus{
+
+input:focus {
     border: 2px solid blue;
     outline: none;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
@@ -135,7 +138,8 @@ button {
     box-shadow: grey;
     font-weight: 600;
 }
-button:hover{
+
+button:not(:disabled):hover {
     cursor: pointer;
 }
 
@@ -147,5 +151,16 @@ button:hover{
 a {
     text-decoration: none;
     color: #8b4513;
-    
+}
+
+.error {
+    border-color: red;
+    color: red;
+    font-style: italic;
+}
+.valid{
+    border-color: green;
+}
+.email:not(:placeholder-shown):valid{
+    border-color: green;
 }
