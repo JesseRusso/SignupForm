@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://kit.fontawesome.com/266a5d8226.js" crossorigin="anonymous"></script>
     <title>Signup Form</title>
 </head>
 
@@ -33,36 +33,40 @@
                 <div class="form-title">Let's do this!</div>
                 <div class="inputs">
                     <div class="input"><label for="first-name">*First Name</label>
-                        <input type="text" name="first-name" id="first-name" minlength="1" title="First name cannot be blank" required>
-                        <div><sub id="fName-error"></sub></div>
+                        <input type="text" name="first-name" id="first-name" minlength="1"
+                            title="First name cannot be blank" required>
                     </div>
                     <div class="input"><label for="last-name">*Last Name</label>
-                        <input type="text" name="last-name" id="last-name" minlength="2" title="Last name cannot be blank" required>
-                        <div><sub id="lName-error"></sub></div>
+                        <input type="text" name="last-name" id="last-name" minlength="2"
+                            title="Last name cannot be blank" required>
                     </div>
-                    <div class="input email"><label for="email">*Email</label>
-                        <input type="email" name="email" title="Please enter a valid email address" required>
+                    <div class="input"><label for="email">*Email</label>
+                        <input type="email" class="email" name="email" title="Please enter a valid email address"
+                            required>
                     </div>
                     <div class="input"><label for="phone-number">Phone Number</label>
-                        <input type="tel" id="tel" name="phone-number" minlength="10" maxlength="12" placeholder="ex: 604-123-4567">
+                        <input type="tel" id="tel" name="phone-number" minlength="10" maxlength="16"
+                            placeholder="ex: 778-123-4567" title="778-123-4567"
+                            pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
                     </div>
                     <div class="input"><label for="password">*Password</label>
-                        <input type="password" name="password" minlength="6"id="first-pass" required>
-                        <div><sub id="pass1-error"></sub></div>
+                        <input class="pword" type="password" name="password" minlength="6" id="first-pass" required>
                     </div>
                     <div class="input"><label for="password_confirm">*Confirm Password</label>
-                        <input type="password" name="password_confirm" minlength="6" id="second-pass" required>
-                        <div><sub id="pass2-error"></sub></div>
+                        <input class="pword" type="password" name="password_confirm" minlength="6" id="second-pass"
+                            required>
                     </div>
                 </div>
             </div>
             <div class="button-section">
-                <button id="submit-button" type="button" disabled>Create Account</button>
-                <div class="login">Already have an account? <a>Log in</a></div>
+                <div>
+                    <button id="submit-button" type="submit" disabled>Create Account</button>
+                    <div class="login">Already have an account? <a>Log in</a></div>
+                </div>
+                <div class="footer">Jesse Russo <a href="https://github.com/JesseRusso"><i class="fa fa-github fa-xl"></i></a> The Odin Project</div>
             </div>
-        </form> 
+        </form>
     </div>
-    
     <script src="./script.js"></script>
 </body>
 

@@ -76,6 +76,9 @@ body {
 }
 
 .button-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 30vh;
     background-color: rgba(240, 240, 240, 1);
     padding: 5vh 0 0 3vw;
@@ -128,11 +131,17 @@ input:focus {
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
+
+input:not(:required):placeholder-shown {
+    border-color: #E5E7EB;
+}
+
 button {
     background-color: #8b4513;
     color: white;
     font-size: 1.1em;
-    padding: 2vh 3vw 2vh 3vw;
+    height: 3em;
+    width: 12vw;
     border: none;
     border-radius: 8px;
     box-shadow: grey;
@@ -158,9 +167,22 @@ a {
     color: red;
     font-style: italic;
 }
-.valid{
+
+.valid {
     border-color: green;
 }
-.email:not(:placeholder-shown):valid{
+
+:valid:not(:placeholder-shown):not(.pword) {
     border-color: green;
+}
+.footer{
+    align-self: center;
+    font-family: monospace;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    height: 1.5em;
+}
+.footer a{
+    color: black;
 }
